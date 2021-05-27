@@ -12,7 +12,7 @@
     </div>
     <div class="portfolio-body fx">
         <div class="project br-rd">
-            <div class="pjt-cap"><img src="libs\images\mywork\echrili.jpg" alt=""></div>
+            <div class="pjt-cap"><img src="libs\images\mywork\Echrili.jpg" alt=""></div>
             <div class="pjt-info">
                 <h4 class="pjt-name">Project Name</h4>
                 <span class="pjt-date">12/04/2018</span>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="project br-rd">
-            <div class="pjt-cap"><img src="libs\images\mywork\echrili.jpg" alt=""></div>
+            <div class="pjt-cap"><img src="libs\images\mywork\Echrili.jpg" alt=""></div>
             <div class="pjt-info">
                 <h4 class="pjt-name">Project Name</h4>
                 <span class="pjt-date">10/05/2017</span>
