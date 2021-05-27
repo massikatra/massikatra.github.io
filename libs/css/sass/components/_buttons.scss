@@ -1,0 +1,19 @@
+.btn {
+	padding: 8px 15px;
+	text-align: center;
+	text-transform: capitalize;
+	border: 2px solid;
+	@include prefixer(border-radius, 4px, webkit moz ms o);
+	@include prefixer(transition, all .3s ease-in-out, webkit moz ms o);
+	cursor: pointer;
+}
+
+.btn-main {
+	background-color: transparent;
+	color: $mainColor;
+    border-color: $mainColor;
+	&:hover {
+		background-color: $mainColor;
+		color: #FFF;
+	}
+}

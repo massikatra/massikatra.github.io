@@ -1,0 +1,62 @@
+/* start inputs */
+.inpt-area {
+	position: relative;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.inpt-area .inpt {
+	margin-bottom: 0;
+}
+
+.inpt {
+	display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+	border: 3px solid $lightBlack;
+    background-color: $mediumBlack;
+    color: $fontColor;
+	@include prefixer(border-radius, 4px, webkit moz ms o);
+	@include prefixer(transition, all .3s ease-in-out, webkit moz ms o);
+	&:focus {
+		outline: none;
+		border-color: $mainColor;
+        background-color: $lightBlack;
+	}
+}
+
+textarea.inpt {
+	height: 10rem;
+}
+
+.inpt-i {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	color: $lightBlack;
+}
+
+.qnt-inpt {
+	display: flex;
+    align-items: flex-end;
+    width: 10rem;
+    padding: 0.97rem;
+	border: .3rem solid $lightBlack;
+	@include prefixer(border-radius, .4rem, webkit moz ms o);
+    input {
+    	width: 100%;
+	    text-align: center;
+	    border: none;
+	    color: $fontColor;
+	    &:focus {
+	    	outline: none;
+	    }
+    }
+    i {
+    	cursor: pointer;
+    	&:hover {
+    		color: $mainColor;
+    	}
+    }
+}

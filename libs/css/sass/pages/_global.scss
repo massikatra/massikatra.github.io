@@ -1,0 +1,85 @@
+/*************************************************** Global HTML rules ********************************************************/
+* {
+	@include prefixer(box-sizing, border-box, webkit moz ms o);
+}
+
+body {
+    background-color: $darkBlack;
+    padding: 20px;
+    color: $fontColor;
+	font: {
+		family: 'Poppins', sans-serif;
+		font-weight: 500;
+		size: 16px;
+	}
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: 500;
+	color: $headerColor;
+}
+
+p {
+	line-height: 1.7;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+a {
+	color: $fontColor;
+	text-decoration: none;
+	@include prefixer(transition, color .3s ease-in-out, webkit moz ms o);
+	&:hover {
+		color: $mainColor;
+	}
+}
+
+/*************************************************** Global Classes ********************************************************/
+.container {
+	margin: 0 auto 100px;
+	padding-right: 15px;
+	padding-left: 15px;
+	position: relative;
+	@media #{$minSm}{
+		width: 96%;
+	}
+	@media #{$minMd}{
+		width: 90%;
+	}
+	@media #{$minLg}{
+		width: 1170px;
+	}
+}
+
+.txt-ctr-xs {
+	@media #{$maxXs}{
+		text-align: center;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.clear {
+	display: block;
+	clear: both;
+}
+
+.br-rd {
+	@include prefixer(border-radius, 4px, webkit moz ms o);
+}

@@ -1,0 +1,354 @@
+/* start main view styling */
+.view {
+    width: 100%;
+    height: calc(100vh - 124px);
+    margin-top: 20px;
+    overflow: hidden;
+    .content {
+        width: calc(78% - 20px);
+        height: 100%;
+        overflow-y: auto;
+        padding: 20px;
+        background-color: $mediumBlack;
+    }
+}
+
+/* start home section styling */
+.home {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    /*background: linear-gradient(to right bottom, #333333d1, #333333d1), url(../images/home-back.jpg) no-repeat top center;*/
+    .main-header {
+        font-size: 60px;
+        font-weight: bold;
+        color: $headerColor;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .main-p {
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: $fontColor;
+        font-size: 18px;
+    }
+}
+
+/* start about me section styling */
+.about {
+    width: 100%;
+    .about-article {
+        .article-head {
+            margin: 0 0 10px;
+        }
+        .article-desc {
+            margin-top: 0;
+        }
+        .btn {
+            margin-bottom: 20px;
+        }
+    }
+    .statistics {
+        width: 100%;
+        padding: 30px 0;
+        .info {
+            width: 25%;
+            border-right: 3px solid $lightBlack;
+            text-align: center;
+            &:last-of-type {
+                border-right: none;
+            }
+            span {
+                display: block;
+            }
+            .number {
+                font-size: 45px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .services {
+        padding: 30px 0;
+        .service {
+            width: 49%;
+            background-color: $panelBack;
+            margin-bottom: 20px;
+            padding: 16px;
+            border: 3px solid $lightBlack;
+            .service-head {
+                width: 100%;
+                .icon-area {
+                    width: 60px;
+                    margin-right: 10px;
+                    padding: 5px;
+                    background-color: $mediumBlack;
+                    align-items: center;
+                    border: 3px solid $lightBlack;
+                    i {
+                        display: block;
+                        color: $lightBlack;
+                        @include prefixer(transition, color .3s ease-in-out, webkit moz ms o);
+                    }
+                }
+                .service-heading {
+                    width: calc(100% - 90px);
+                    h3 {
+                        margin: 0 0 9px;
+                    }
+                    span {
+                        font-size: 13px;
+                        color: $lightBlack;
+                    }
+                }
+            }
+            &:hover .icon-area i{
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+/* start resume section */
+.resume {
+    width: 100%;
+    .resume-body {
+        margin-bottom: 50px;
+        .sum-side {
+            position: relative;
+            width: 46%;
+            border-left: 5px solid $headerColor;
+            margin-left: 15px;
+            .side-icon {
+                position: absolute;
+                top: 0px;
+                left: -25px;
+                padding-bottom: 13px;
+                color: $headerColor;
+                background-color: $mediumBlack;
+            }
+            .side-head {
+                margin: 0 0 20px 30px;
+                font-size: 36px;
+                text-transform: capitalize;
+            }
+            .step {
+                width: 96%;
+                margin-left: 4%;
+                margin-bottom: 50px;
+                padding: 10px;
+                background-color: $panelBack;
+                position: relative;
+                border: 3px solid $lightBlack;
+                @include prefixer(transition, all .3s ease-in-out, webkit moz ms o);
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                &:hover {
+                    border-color: $headerColor;
+                }
+                &:hover .fa{
+                    color: $headerColor;
+                }
+                .fa {
+                    position: absolute;
+                    left: -19px;
+                    top: 2px;
+                    color: $lightBlack;
+                    @include prefixer(transition, color .3s ease-in-out, webkit moz ms o);
+                }
+                .step-head {
+                    width: 100%;
+                    position: relative;
+                    font-size: 26px;
+                    margin: 0;
+                    .date {
+                        position: absolute;
+                        top: 4px;
+                        right: 2px;
+                        z-index: 9;
+                        background-color: $redColor;
+                        font-size: 15px;
+                        padding: 3px;
+                    }
+                }
+                .step-place {
+                    font-size: 14px;
+                    color: $lightBlack;
+                }
+            }
+        }
+    }
+    /* start skills section */
+    .skills {
+        width: 100%;
+        .skills-type {
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            .type-head {
+                width: 100%;
+                position: relative;
+                font-size: 30px;
+                color: $headerColor;
+                padding-left: 50px;
+                margin: 0 0 20px;
+                .fa {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .skill {
+                width: 23%;
+                margin-bottom: 20px;
+                .skill-name {
+                    width: 100%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 26px;
+                }
+                .card {
+                    position: relative;
+                    width: 100%;
+                    align-items: center;
+                    color: $mainColor;
+                    svg {
+                        position: relative;
+                        width: 180px;
+                        height: 180px;
+                        z-index: 99;
+                        circle {
+                            width: 100%;
+                            height: 100%;
+                            fill: none;
+                            stroke: $lightBlack;
+                            stroke-width: 15;
+                            stroke-linecap: round;
+                            transform: translate(20px, 20px);
+                        }
+                        circle:nth-child(2){
+                            stroke: $headerColor;
+                        }
+                    }
+                    .progress {
+                        position: absolute;
+                        font-size: 35px;
+                    }
+                }
+                .html-card svg circle:nth-child(2){
+                    stroke-dasharray: 830;
+                    stroke-dashoffset: 430;
+                }
+                .css-card svg circle:nth-child(2){
+                    stroke-dasharray: 830;
+                    stroke-dashoffset: 490;
+                }
+                .sass-card svg circle:nth-child(2){
+                    stroke-dasharray: 830;
+                    stroke-dashoffset: 460;
+                }
+                .jq-card svg circle:nth-child(2){
+                    stroke-dasharray: 830;
+                    stroke-dashoffset: 515;
+                }
+            }
+        }
+    }
+}
+
+/* start portfolio section */
+.portfolio {
+    width: 100%;
+    .changer {
+        width: 100%;
+        margin-bottom: 20px;
+        span {
+            padding: 4px 8px;
+            cursor: pointer;
+            text-transform: capitalize;
+            @include prefixer(transition, all .3s ease-in-out, webkit moz ms o);
+        }
+        span:hover, .active {
+            background-color: $lightBlack;
+            color: $mainColor;
+        }
+    }
+    .portfolio-body {
+        .project {
+            width: calc(96% / 3);
+            height: 400px;
+            margin: 0 2% 20px 0;
+            border: 5px solid $borderColor;
+            overflow: hidden;
+            position: relative;
+            &:nth-of-type(3n){
+                margin-right: 0;
+            }
+            &:hover .pjt-info {
+                bottom: 0;
+            }
+            .pjt-cap {
+                width: 100%;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .pjt-info {
+                width: 100%;
+                position: absolute;
+                bottom: -116px;
+                z-index: 99;
+                padding: 20px;
+                background-color: $mediumBlack;
+                transition: all .3s ease-in-out;
+                .pjt-name {
+                    margin: 0;
+                    color: $mainColor;
+                    font-size: 18px;
+                }
+                .pjt-date {
+                    color: $secondHeader;
+                    font-size: 14px;
+                    display: block;
+                    margin-top: 5px;
+                    font-weight: 300;
+                }
+                .pjt-desc {
+                    color: $secondHeader;
+                    margin-bottom: 10px;
+                }
+                a:hover {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
+
+/* start contact section */
+.contact {
+    .contact-links {
+        width: 35%;
+        li {
+            width: 100%;
+            margin-bottom: 15px;
+            overflow: hidden;
+            i {
+                margin-right: 10px;
+            }
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+        .cap {
+            height: 225px;
+        }
+    }
+    .contact-form {
+        width: 62%;
+        .btn {
+            width: 200px;
+        }
+    }
+}

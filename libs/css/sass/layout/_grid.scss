@@ -1,0 +1,50 @@
+/* flex grid system */
+.fx {
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.sb {
+	justify-content: space-between;
+}
+
+.sa {
+	justify-content: space-around;
+}
+
+.fs {
+	justify-content: flex-start;
+}
+
+.fe {
+	justify-content: flex-end;
+}
+
+.fc {
+	justify-content: center;
+}
+
+.cl {
+	flex-direction: column;
+}
+
+.products-row {
+	.row-header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 2rem;
+		i {
+		    padding: .8rem;
+		    @include prefixer(transition, all .3s ease-in-out, webkit moz ms o);
+		}
+	}
+	.row-body {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+}
